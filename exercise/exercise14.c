@@ -1,6 +1,34 @@
 #include <stdio.h>
 #include <ctype.h>
+/*
+	1.Rework these functions so that you have fewer functions. For
+	example, do you really need can_print_it ?
+	Have print_arguments figure how long each argument string is
+	using the strlen function, and then pass that length to
+	print_letters . Then, rewrite print_letters so it only
+	processes this fixed length and doesn't rely on the '\0'
+	terminator. You will need the #include <string.h> for this.
+	2.Use man to lookup information on isalpha and isblank . Use
+	the other similar functions to print out only digits or other
+	characters. ---> man isalpha said that chacter calssificacion fuctuions
+	and man isablank is the same
+*/
 
+
+//1
+/*
+void print_letters(char arg[]){
+ int i = 0;
+ for (i = 0; arg[i] != '\0'; i++) {
+   char ch = arg[i];
+   if (isalpha(ch) || isblank(ch)) {
+     printf("'%c' == %d ", ch, ch);
+    }
+  }
+  printf("\n");
+}
+
+*/
 int can_print_it(char ch);
 void print_letters(char arg[]);
 
